@@ -1,0 +1,47 @@
+.outerCarousel {
+    display: flex;
+    justify-content: center;
+}
+
+.middleImage {
+    display: flex;
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.leftcenter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-left: 20px ;
+    
+}
+
+.rightcenter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    padding-right: 20px;
+    
+}
+
+.textOnImage {
+    background-color: rgba(16, 46, 53, 0.5);
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.carouselImg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+    color: azure;
+}

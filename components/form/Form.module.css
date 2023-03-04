@@ -1,0 +1,73 @@
+.submitButton {
+    background: none;
+    color: azure;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.submitButton:hover {
+    background-color: azure;
+    color: black;
+}
+
+.labelfn {
+    color: azure;
+    position: relative;
+    left: -12.7rem
+}
+
+.labelln {
+    color: azure;
+    position: relative;
+    left: -21rem
+}
+
+.labelm {
+    color: azure;
+    position: relative;
+    left: -13.7rem
+}
+
+.box {
+    display: flex;
+    width:fit-content;
+    border-color: black;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.boxCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    gap: 10px
+}
+
+.buttonEnd {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+    padding-right: 35rem;
+}
+
+.alert {
+    text-align: left;
+}
+
+.leftIndent {
+    position: relative;
+    left: -260px;
+}

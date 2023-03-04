@@ -1,57 +1,64 @@
 import Head from 'next/head'
 import Image from 'next/legacy/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/contact.module.css'
-import React, { Components, useState, useEffect } from 'react';
-import data from '../data/info.json'
+import React, { Components, useState, useEffect } from 'react'
+import Form from '@/components/Form'
+import Menu from '@/components/menu'
+import Link from 'next/link'
 
 
-const inter = Inter({ subsets: ['latin'] })
+export default function Contact() {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [mail, setMail] = useState('')
 
-export default function Home() {
-    return (
-      <>
+  return (
+    <>
       <Head>
-        <title>Home</title>
-        <meta name="descriptionOne" content="MDIA 2109" />
-        <meta name="descriptionTwo" content="Assignment #1 - Contact Page" />
-        <meta name="descriptionThree" content="BCIT Digital Design and Development Diploma" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Contact Us</title>
+        <meta name="author" content="MDIA 2109" />
+        <meta property="og:title" content="Assignment #1 - Contact Us Page" />
+        <meta property="og:description" content="BCIT Digital Design and Development Diploma" />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <Image
-        src="/backgroundMountainUpsideDown.jpg"
-        layout="fill"
-        objectFit="cover"
-      />
-      <main className={styles.mainArea}>
-      <div className={styles.loginBox}>
-        <label>First Name: </label>
-        <input
-          type="text"
-          id="first"
-          name="first"
-          pattern="[A-Z]{1}[a-z]{2-10}"
-          title='the first letter should be capital'
-          onChange={(e=> setFormData({...formData, firstName: e.target.value}))}
-        />
+      <main className={styles.body}>
 
-        <label>User Name: </label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          required 
-          title='the first letter should be capital'
-          maxLength="10"
-          minlength="5"
-          onChange={(e=> setFormData({...formData, username: e.target.value}))}
-        />
-        <button className={styles.button} type="submit" onClick={() => CheckLogin()}>Submit</button>
+        <div className={styles.navicons}>
+          <Menu />
 
+          <Image
+            src="/graduation-hat.png"
+            height={40} width={70}
+          />
+        </div>
+
+        <div className={styles.title}>
+          <hr className={styles.line}></hr>
+          <h1 className={styles.titleText}>Contact Us</h1>
+          <hr className={styles.line}></hr>
+        </div>
+
+        <div className={styles.description}>
+          <p>Want to discuss? Lets chat!</p>
+        </div>
+
+        <div className={styles.contactBox}>
+          <Form navigate="/." />
         </div>
       </main>
+
+      <Link href="/.">
+        <span className={styles.arrows}>
+          <Image
+            src="/upwardArrow.png"
+            height={40} width={30}
+            className={styles.downArrows}
+          />
+        </span>
+      </Link>
+
+
     </>
   )
 }

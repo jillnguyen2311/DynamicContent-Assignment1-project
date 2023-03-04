@@ -1,111 +1,71 @@
-.mainArea {
-  margin: 5rem 10rem;
+.body {
+  background-image: url('../public/backgroundMountain.jpg');
+  background-size: cover;
+  height: 150vh;
+  width: 150vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: helvetica;
 }
 
 .navicons {
   display: flex;
   justify-content: space-between;
+  padding: 3rem 5rem;
+  flex-wrap: wrap;
 }
 
 .arrows {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: flex-end;
-  align-self: flex-end;
-  align-items: flex-end;
-  margin-top: 45%;
+  align-self: flex-end; 
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 3rem 10rem;
+  flex-wrap: wrap;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.textbox {
+  flex-direction: column;
+  width: 25rem;
+  font-family: helvetica;
+  color:azure;
+  margin: 15rem 15rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-}
-
-.center {
+.textboxOutside {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  flex-wrap: wrap;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.line {
+  border: 2px solid #f4d6b9;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.transButt {
+  background: none;
+  color: azure;
+  border-color: azure;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin-right: 10px;
 }
 
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+.transButt:hover {
+  background-color: azure;
+  color: black;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
 
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
 
-@media (prefers-reduced-motion) {
-  .thirteen::before {
-    animation: none;
-  }
 
-  .card:hover span {
-    transform: none;
-  }
-}
 
 /* Mobile */
 @media (max-width: 700px) {
